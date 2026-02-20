@@ -1,8 +1,9 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
+    componenteFormativo: 'Introducción a la administración',
+    descripcionCurso:
+      'La historia ha demostrado que, en la práctica, pueden aplicarse diversas teorías para resolver o apoyar la solución de problemáticas naturales del devenir empresarial u organizacional. En este componente formativo, se estudiarán las diferentes teorías y conceptos que le han dado origen a la administración como ciencia aplicable.',
+    imagenBannerPrincipal: require('@/assets/curso/portada/banner-img.png'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [
       {
@@ -13,45 +14,73 @@ export default {
         clases: ['banner-principal-decorativo-2'],
         imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
       },
+      {
+        clases: ['banner-principal-decorativo-3'],
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-3.svg'),
+      },
     ],
   },
   menuPrincipal: {
     menu: [
       {
         nombreRuta: 'inicio',
-        icono: 'fas fa-home',
         titulo: 'Volver al inicio',
       },
       {
         nombreRuta: 'introduccion',
-        icono: 'fas fa-info-circle',
         titulo: 'Introducción',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Fundamentos e introducción a la administración',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '1.1',
-            titulo: 'Subtema 1',
+            titulo: 'Orígenes y enfoques',
             hash: 't_1_1',
+          },
+          {
+            numero: '1.2',
+            titulo: 'Administración estratégica',
+            hash: 't_1_2',
           },
         ],
       },
-
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Principios del proceso administrativo',
         desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '2.1',
+            titulo: 'Planeación',
+            hash: 't_2_1',
+          },
+          {
+            numero: '2.2',
+            titulo: 'Organización',
+            hash: 't_2_2',
+          },
+          {
+            numero: '2.3',
+            titulo: 'Dirección',
+            hash: 't_2_3',
+          },
+          {
+            numero: '2.4',
+            titulo: 'Control',
+            hash: 't_2_4',
+          },
+        ],
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'La empresa como escenario activo de administración',
         desarrolloContenidos: true,
       },
     ],
@@ -86,7 +115,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/dist.pdf',
+        download: 'downloads/122153_CF01_DU.zip',
       },
       {
         icono: 'fas fa-download',
@@ -102,90 +131,177 @@ export default {
   },
   complementario: [
     {
-      tema: '',
-      referencia: '',
-      tipo: 'Sitio web',
-      link: '',
+      tema: 'Principios del proceso administrativo',
+      referencia:
+        'Ecosistema de Recursos Educativos Digitales SENA (2022).<i> Proceso Administrativo: fase de control</i> [Video]. YouTube.',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=aB34nClq0o0',
+    },
+    {
+      tema: 'Fundamentos e introducción a la administración',
+      referencia:
+        'Bancoldex (s.f.).<i> Clasificación de empresas en Colombia.</i> Bancoldex.',
+      tipo: 'Página web',
+      link:
+        'https://www.bancoldex.com/clasificacion-de-empresas-en-colombia-200',
+    },
+    {
+      tema: 'La empresa como escenario activo de administración',
+      referencia:
+        'Münch, L. (2018). <i>Administración: gestión organizacional, enfoques y procesos administrativos.</i> ',
+      tipo: 'PDF',
+      link:
+        'https://profesorailleanasilva.files.wordpress.com/2015/10/administracic3b3n-lourdes-munch-2a-edicic3b3n.pdf',
     },
   ],
   glosario: [
     {
-      termino: 'Término',
-      significado: 'Definición',
+      termino: 'Administración',
+      significado:
+        'conjunto de acciones que se realizan para administrar una empresa.',
+    },
+    {
+      termino: 'Bienes',
+      significado:
+        'bienes producidos por la industria y que el consumidor puede comprar.',
+    },
+    {
+      termino: 'Burocracia',
+      significado:
+        'conjunto de actividades y trámites que se deben seguir para resolver un asunto de carácter administrativo.',
+    },
+    {
+      termino: 'Conductista',
+      significado: 'hace referencia al estudio de la conducta de las personas.',
+    },
+    {
+      termino: 'Empresa',
+      significado:
+        'entidad en la que intervienen el capital y el trabajo como factores de producción de actividades industriales o mercantiles, o para la prestación de servicios.',
+    },
+    {
+      termino: 'Estratégica',
+      significado:
+        'una decisión o panorama inteligente frente a la situación o contexto de una empresa.',
+    },
+    {
+      termino: 'Organización',
+      significado:
+        'grupo de personas y medios organizados con un fin determinado.',
+    },
+    {
+      termino: 'Sector productivo',
+      significado:
+        'es una agrupación de las actividades productivas según sus características, de tal forma que permita hacer una clasificación más ordenada de la producción y facilitar su análisis.',
+    },
+    {
+      termino: 'Servicios',
+      significado:
+        'actividad que se presta, a nivel empresarial, con relación a productos intangibles.',
     },
   ],
   referencias: [
     {
-      referencia: '',
-      link: '',
+      referencia:
+        'Chiavenato, I. (2019). <em>Introducción a la teoría general de la administración.</em> McGraw-Hill.',
+    },
+    {
+      referencia:
+        'Hernández, S., Palafox,G. & Aguado, C. (2020). <i>Administración: pensamiento, procesos estratégicos y administrativos para la era de la inteligencia artificial.</i> McGraw-Hill.',
+    },
+    {
+      referencia:
+        'Münch, L. (2018). <i>Administración: gestión organizacional, enfoques y procesos administrativos.</i>',
+      link:
+        'https://profesorailleanasilva.files.wordpress.com/2015/10/administracic3b3n-lourdes-munch-2a-edicic3b3n.pdf',
     },
   ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable del ecosistema',
-          centro: 'Dirección General',
-        },
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable de línea de producción',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Nombre del rol',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Diseñador de contenidos',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Desarrollador <i>full stack</i>',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Animador y productor audiovisual',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'VALIDACIÓN RECURSO EDUCATIVO DIGITAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Validador y vinculador de recursos educativos digitales',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Evaluador de contenidos inclusivos y accesibles',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
+  creditos: {
+    liderEquipo: [
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Líder del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    contenidoInstruccional: [
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Diseño web',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education ',
+        cargo: 'Producción audiovisual',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Desarrollo front-end',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    gestoresRepositorio: [
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+    ],
   },
+  // creditosInicio: [
+  //   {
+  //     titulo: 'En alianza',
+  //     contenido: [
+  //       require('@/assets/template/logo-sena-naranja.svg'),
+  //       require('@/assets/template/mintic.jpg'),
+  //       require('@/assets/template/minsalud.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'En compañía',
+  //     contenido: [
+  //       require('@/assets/template/presidencia.jpg'),
+  //       require('@/assets/template/ecopetrol.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'Una iniciativa',
+  //     contenido: [require('@/assets/template/santander.jpg')],
+  //   },
+  // ],
 }

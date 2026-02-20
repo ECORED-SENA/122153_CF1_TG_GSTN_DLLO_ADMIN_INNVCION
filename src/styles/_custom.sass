@@ -1,32 +1,229 @@
 .banner-principal-decorativo
   &-1
     animation: float1 3.5s ease-in-out infinite alternate
-    position: absolute
+    position: relative
     top: 20%
-    right: 10%
+    right: 80%
+    z-index: 1
+    width: 50px
   &-2
     animation: float1 2.8s ease-in-out infinite alternate
-    position: absolute
-    top: 51%
-    right: 30%
+    position: relative
+    top: 35%
+    right: 10%
+    z-index: 1
+    width: 50px
+  &-3
+    animation: float1 2.8s ease-in-out infinite alternate
+    position: relative
+    top: 65%
+    right: 80%
+    z-index: 1
+    width: 50px
+  &-4
+    animation: spin 4.5s linear infinite 
+    position: relative
+    top: 31%
+    right: 8%
+    width: 450px
+    height: 450px
+    z-index: 0
+    width: 35px
 
 @keyframes float1
   0%
     transform: translateY(20px)
+
   100%
     transform: translateY(0px)
+
+@keyframes spin 
+   
+    100% 
+        transform: rotate(360deg) 
+@media (min-width: 1200px)
+  .t-img
+    height:425px !important
+
+.img-infografica__item, .img-infografica-b__item 
+    width: 3.5%
+.izq
   
-.banner-principal .tarjeta
-  background-position: left 50% !important
+  text-align: end !important
 
-.banner-principal__row .banner-principal__img
-  width: 400px !important  
+.img-infografica__item__numero
+    font-size: x-large
+    color: #ffffff !important
+///colores
+.fnd-1
+  background-color: #FFE8C8 !important       
+.color-fondo
+  background-color: rgba(117,182,47,0.13)!important
+.color-fondo-secundario
+  background-color: rgba(248,83,22,0.15)!important
+.color-fondo-terciario
+   background-color: #dce73625 !important
+.color-fondo2
+  background-color: $color-secundario
+.color-acentoc-fondo
+  background-color: $color-acento-contenido
+.color-acentob-fondo
+  background-color: $color-acento-botones
 
-.titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: white !important
+.fcab15
+  background-color: #FAFCE1 !important
+.fcs15, .tarjeta.color-secundario.acordion__activo
+  background-color: #dce73625 !important
 
-.banner-interno__titulo__icono i
-  color: $color-primario
+.acordion
+  .tarjeta.color-secundario
+    background-color: #f6f6f6
 
-figcaption
-  font-weight: normal
+.acordion__accion__btn, .acordion__accion__btn--a
+  background-color: $color-secundario !important
+
+//tarjetas hover txt
+
+.crd_hover_txt
+  position: relative
+  padding: 0!important
+  overflow: hidden!important
+  background-color: #F8FAD6
+  width: 300px !important
+  height: 300px !important
+  &:hover
+    .crd_hover_txt--body
+      transform: translateY(0)
+      background-color: #dce736
+  &--body
+    position: absolute
+    padding: 1.1rem
+    bottom: 0
+    transition: all .5s ease-in-out
+    transform: translateY(calc(100% - 3.85rem))
+    background-color: #dce736
+    z-index: 2
+  &--img
+    position: relative
+    z-index: 1
+    top: 18%
+    left: 18%
+    width: 180px !important
+    height: 200px !important
+
+.tabla-b table, .tabla-c table
+  min-width: 455px !important
+
+//tarjetasAvatar
+.w150px
+  width: 150px !important
+
+.cuadrado
+  color: #3D46C2
+
+.bxsh1
+  box-shadow: 5px 13px 15px rgba(0,0,0,0.1)
+
+// pantallas pequeñas
+@media screen and ( max-width: 576px )
+  .mw-sm-350px
+    max-width: 350px
+    margin: 0 auto 1rem
+  
+  img
+    margin-bottom: 1.5rem
+    margin-top: 1.5rem
+
+.table 
+  width: 25%
+
+.bg15pc-x
+  background-position: 15% !important
+
+
+.margenes
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  
+
+.tabs-c__tab--active
+  font-weight: bold !important;
+
+.lista-centrar
+  text-align: center !important;
+
+/// modal 
+.img-infografica-b
+  &--open
+    .img-infografica-b__img
+      position: absolute
+      width: 100%
+  &__modal
+    background: rgba(248, 250, 214, 9)
+    animation: entrada-modal 0.2s ease-in-out forwards
+    &__contenido
+      div > *
+        color: $black !important
+    &__btn-cerrar
+      position: absolute
+      right: 10px
+      top: 10px
+      padding: 5px
+      cursor: pointer
+      background-color: $color-acento-botones
+      i
+        display: block
+        line-height: 0.8em
+        font-size: 1.5rem
+        color: $white
+      @media (max-width: $bp-max-lg)
+        right: 0px
+        top: 0px
+        i
+          font-size: 1rem
+
+  &.color-primario
+    .img-infografica-b__item__numero
+      color: textColor($color-primario)
+      i
+        color: textColor($color-primario)
+
+  &.color-secundario
+    .img-infografica-b__item__numero
+      color: textColor($color-secundario)
+      i
+        color: textColor($color-secundario)
+
+  &.color-acento-contenido
+    .img-infografica-b__item__numero
+      color: textColor($color-acento-contenido)
+      i
+        color: textColor($color-acento-contenido)
+
+  &.color-acento-botones
+    .img-infografica-b__item__numero
+      color: textColor($color-acento-botones)
+      i
+        color: textColor($color-acento-botones)
+
+@keyframes pulse
+  0%
+    transform: scale(1)
+    opacity: 0
+  10%
+    opacity: .7
+  100%
+    transform: scale(2)
+    opacity: 0
+
+@keyframes entrada-modal
+  0%
+    transform: scale(0.9)
+    opacity: 1
+  100%
+    transform: scale(1)
+    opacity: 1
+
+.txt
+  &-p1
+    text-align: left
