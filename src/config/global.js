@@ -24,10 +24,12 @@ export default {
     menu: [
       {
         nombreRuta: 'inicio',
+        icono: 'fas fa-home',
         titulo: 'Volver al inicio',
       },
       {
         nombreRuta: 'introduccion',
+        icono: 'fas fa-info-circle',
         titulo: 'Introducción',
         desarrolloContenidos: true,
       },
