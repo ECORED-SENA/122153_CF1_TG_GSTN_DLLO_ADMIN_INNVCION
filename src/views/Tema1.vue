@@ -136,7 +136,7 @@
               h3.mb-1 Enfoques y teorías administrativas asociadas
               p Para efectos de dar mayor claridad, a continuación se procede a explicar cada uno de los enfoques y las teorías asociadas, así como también sus autores y motivadores, en el documento Enfoques y teorías administrativas asociadas.
             .col-sm-auto
-              a.boton.color-acento-botones(:href="obtenerLink('/downloads/Enfoques y teorías administrativas asociadas_anexo_1.pdf')" target="_blank")
+              a.boton.color-acento-botones(:href="obtenerLink('/downloads/Anexo1_Enfoques_teorias_administrativas_asociadas.pdf')" target="_blank")
                 span(style="color: white") Descargar
                 i(style="color: white").fas.fa-file-download
                 
